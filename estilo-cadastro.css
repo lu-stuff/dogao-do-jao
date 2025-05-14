@@ -1,0 +1,95 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Unbounded', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #fffaf5;
+    }
+
+    .login-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .login-card-dogao {
+      background: white;
+      max-width: 800px;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .login-card-dogao h2 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    form.form-horizontal {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .form-row input {
+      flex: 1;
+      padding: 0.8rem;
+      border-radius: 40px;
+      border: none;
+      background: #f0f0f0;
+      font-size: 1rem;
+    }
+
+    button.btn-cadastro {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 40px;
+      background: #eb3e40;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    button.btn-cadastro:hover {
+      background: #ac2d2f;
+    }
+
+    p.redirect {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    p.redirect a {
+      color: #eb3e40;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    p.redirect a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }

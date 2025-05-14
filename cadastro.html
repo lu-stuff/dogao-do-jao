@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro</title>
+  <link rel="icon" href="imagens-site/isologo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="estilo-cadastro.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+
+    <div class="logo">
+      <a href="index.html">
+    <img src="imagens-site/logo-vermelho.png" alt="Logo Dogão do Jão" />
+      </a>
+    </div>
+  
+      <!-- Botão hambúrguer -->
+      <button class="menu-toggle" aria-label="Abrir menu">
+        &#9776;
+      </button>
+  
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+
+
+
+        <div class="delivery-dropdown">
+          <a href="#" id="delivery-toggle">Delivery &#9662;</a> <!-- ▼ -->
+          <div class="delivery-menu hidden">
+            <a href="https://www.ifood.com.br" target="_blank">iFood</a>
+            <a href="https://www.rappi.com.br" target="_blank">Rappi</a>
+          </div>
+        </div>
+
+
+
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <div class="icons">
+          <a href="login.html" target=>
+            <img src="imagens-site/icone-perfil.png" alt="Perfil" class="icon" />
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+
+
+
+
+
+  <main class="login-main">
+    <div class="login-card-dogao">
+      <h2>CADASTRO</h2>
+      <form class="form-horizontal">
+        <div class="form-row">
+          <input type="text" placeholder="Nome completo" required />
+          <input type="email" placeholder="E-mail" required />
+        </div>
+        <div class="form-row">
+          <input type="password" placeholder="Senha" required />
+          <input type="tel" placeholder="Telefone" required />
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Endereço" required />
+          <input type="text" placeholder="Complemento" />
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="CEP" required />
+          <input type="text" placeholder="Cidade" required />
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="UF" maxlength="2" required />
+        </div>
+        <button type="submit" class="btn-cadastro">Cadastrar</button>
+        <p class="redirect">Já tem uma conta? <a href="login.html">Entrar</a></p>
+      </form>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="imagens-site/isologo.png" alt="Logo Dogão do Jão" />
+      </div>
+  
+      <div class="footer-column">
+        <h3>Institucional</h3>
+        <a href="sobre-nos.html">Quem somos?</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Formas de Pagamento</h3>
+        <div class="payment-logos">
+          <img src="formas-de-pagamento/amex.png" alt="Amex" />
+          <img src="formas-de-pagamento/elo.png" alt="Elo" />
+          <img src="formas-de-pagamento/hipercard.png" alt="Hipercard" />
+          <img src="formas-de-pagamento/mastercard.png" alt="Mastercard" />
+          <img src="formas-de-pagamento/pix.png" alt="Pix" />
+          <img src="formas-de-pagamento/visa.png" alt="Visa" />
+        </div>
+      </div>
+  
+  
+      <div class="footer-column contato">
+    <h3>Entre em contato</h3>
+    
+    <a href="https://www.whatsapp.com/?lang=pt_BR" target="_blank">
+      <img src="imagens-site/icone-whatsapp.png" alt="WhatsApp" class="footer-icon" />4002-8922
+    </a>
+  </div>
+  
+      <div class="footer-column">
+        <h3>Mídias Sociais</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/senaisp.moocagrafica/" target="_blank"><img src="imagens-site/icone-facebook.png" alt="Facebook" class="social-icon" /></a>
+          <a href="https://www.instagram.com/senaigrafica/" target="_blank"><img src="imagens-site/icone-instagram.png" alt="Instagram" class="social-icon" /></a>
+          <a href="https://www.youtube.com/c/SenaiGr%C3%A1fica114/featured" target="_blank"><img src="imagens-site/icone-youtube.png" alt="YouTube" class="social-icon" /></a>
+        </div>
+        <!-- <img src="imagens-site/logo-bege.png" alt="Dogão do Jão" class="logo-pequeno" /> -->
+      </div>
+    </div>
+  
+    <hr />
+  
+    <p class="copyright">
+      &copy; Luan | 2025 · Todos os direitos reservados. Imagens meramente ilustrativas.
+    </p>
+  </footer>
+
+ <script src="menu-delivery.js"></script>
+
+</body>
+</html>

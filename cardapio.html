@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápio</title>
+  <link rel="icon" href="imagens-site/isologo.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="cardapio.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+ <header class="header">
+    <div class="container">
+
+    <div class="logo">
+      <a href="index.html">
+    <img src="imagens-site/logo-vermelho.png" alt="Logo Dogão do Jão" />
+      </a>
+    </div>
+  
+      <!-- Botão hambúrguer -->
+      <button class="menu-toggle" aria-label="Abrir menu">
+        &#9776;
+      </button>
+  
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+
+        
+        <div class="delivery-dropdown">
+          <a href="#" id="delivery-toggle">Delivery &#9662;</a> <!-- ▼ -->
+          <div class="delivery-menu hidden">
+            <a href="https://www.ifood.com.br" target="_blank">iFood</a>
+            <a href="https://www.rappi.com.br" target="_blank">Rappi</a>
+          </div>
+        </div>
+
+
+
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <div class="icons">
+          <a href="login.html" target=>
+            <img src="imagens-site/icone-perfil.png" alt="Perfil" class="icon" />
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <div class="promo-banner">
+    <!-- Banner Desktop -->
+    <div class="banner-wrapper banner-desktop">
+      <img src="banners-index/banner-cardapio-desktop.png" alt="Banner Cardápio Desktop" class="banner-img" />
+    </div>
+  
+    <!-- Banner Mobile -->
+    <div class="banner-wrapper banner-mobile">
+      <img src="banners-index/banner-cardapio-mobile.png" alt="Banner Cardápio Mobile" class="banner-img" />
+    </div>
+  </div>
+  
+  
+  
+  
+
+
+<section class="menu-categorias-wrapper">
+  <div class="scroll-btn left">&#8249;</div>
+
+
+
+  <div class="menu-categorias" id="categoria-scroll">
+    <a href="#novidades" class="categoria">
+      <img src="icones-navegacao/novidades-cinza.png" alt="Novidades" />
+      <span>Novidades</span>
+    </a>
+    <a href="#combos" class="categoria">
+      <img src="icones-navegacao/combos-cinza.png" alt="Combos" />
+      <span>Combos</span>
+    </a>
+    <a href="#dogoes" class="categoria">
+      <img src="icones-navegacao/dogoes-cinza.png" alt="Dogões" />
+      <span>Dogões</span>
+    </a>
+    <a href="#adicionais" class="categoria">
+      <img src="icones-navegacao/acompanhamentos-cinza.png" alt="Adicionais" />
+      <span>Adicionais</span>
+    </a>
+    <a href="#bebidas" class="categoria">
+      <img src="icones-navegacao/bebidas-cinza.png" alt="Bebidas" />
+      <span>Bebidas</span>
+    </a>
+    <a href="#sobremesas" class="categoria">
+      <img src="icones-navegacao/sobremesas-cinza.png" alt="Sobremesas" />
+      <span>Sobremesas</span>
+    </a>
+  </div>
+
+  <div class="scroll-btn right">&#8250;</div>
+</section>
+
+      
+      <div class="fundo-cardapio">
+      <section id="novidades" class="secao-cardapio primeira-secao">
+      <section id="novidades" class="secao-cardapio">
+        <div class="alinhamento-conteudo">
+        <h2>Novidades</h2>
+        </div>
+        <div class="grid-cardapio">
+          
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/novidades/corn-dog-classico.png" alt="Corn Dog Clássico">
+            </div>
+            <div class="info-produto">
+              <h3>Corn Dog Clássico</h3>
+              <p class="descricao">Salsicha envolta em massa crocante tradicional.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 11,90</span>
+                 <button class="btn-carrinho">+</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/novidades/corn-dog-queijo.png" alt="Corn Dog com Queijo">
+            </div>
+            <div class="info-produto">
+              <h3>Corn Dog Queijo</h3>
+              <p class="descricao">Salsicha e queijo derretido em massa dourada.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 13,90</span>
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/novidades/corn-dog-batata.png" alt="Corn Dog com Batata">
+            </div>
+            <div class="info-produto">
+              <h3>Corn Dog Batata</h3>
+              <p class="descricao">Coberto com pedaços crocantes de batata frita.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 14,90</span>
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/novidades/corn-dog-gochujang.png" alt="Corn Dog Gochujang">
+            </div>
+            <div class="info-produto">
+              <h3>Corn Dog Gochujang</h3>
+              <p class="descricao">Toque picante coreano com pó Gochujang.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 13,90</span>
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+    </section>
+
+
+
+      <hr class="hr-cardapio" />
+
+      
+
+
+      <section id="combos" class="secao-cardapio">
+        <h2>Combos</h2>
+        <div class="grid-cardapio">
+          
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/combos/combo-classico.png" alt="Combo Clássico">
+            </div>
+            <div class="info-produto">
+              <h3>Combo Clássico</h3>
+              <p class="descricao">Dogão Bolonhesa com fritas e bebida.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 34,90</span>
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/combos/combo-mexicano.png" alt="Combo Mexicano">
+            </div>
+            <div class="info-produto">
+              <h3>Combo Mexicano</h3>
+              <p class="descricao">Dogão Guacamole, nachos e bebida.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 37,90</span>
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/combos/combo-do-jao.png" alt="Combo do Jão">
+            </div>
+            <div class="info-produto">
+              <h3>Combo do Jão</h3>
+              <p class="descricao">Big Dog, fritas, bebida e sobremesa.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 39,90</span>
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/combos/combo-corn-dog-classico.png" alt="Combo Corn Dog Clássico">
+            </div>
+            <div class="info-produto">
+              <h3>Corn Dog Clássico</h3>
+              <p class="descricao">Corn Dog, sobremesa e refrigerante.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 25,90</span>
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="item-cardapio">
+            <div class="imagem-container">
+              <img src="cardápio/combos/combo-corn-dogs.png" alt="Combo Corn Dogs">
+            </div>
+            <div class="info-produto">
+              <h3>Combo Corn Dogs</h3>
+              <p class="descricao">Sinta o sabor e a crocância de cada Corn Dog.</p>
+              <div class="preco-carrinho">
+                <span class="preco">R$ 49,90</span>
+                <button class="btn-carrinho">🛒</button>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+
+
+
+<hr class="hr-cardapio" />
+
+      
+      <section id="dogoes" class="secao-cardapio">
+  <h2>Dogões</h2>
+  <div class="grid-cardapio">
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-bolonhesa.png" alt="Dogão Bolonhesa">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Bolonhesa</h3>
+        <p class="descricao">Dogão com molho bolonhesa e queijo ralado.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 22,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-big-dog.png" alt="Dogão Big Dog">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Big Dog</h3>
+        <p class="descricao">Molho especial, cheddar cremoso e picles.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 23,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-vinagrete.png" alt="Dogão Vinagrete">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Vinagrete</h3>
+        <p class="descricao">Dogão com vinagrete de pimentões e molho especial.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 20,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-guacamole.png" alt="Dogão Guacamole">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Guacamole</h3>
+        <p class="descricao">Guacamole caseiro, molho parmesão e tomate.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 23,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-bacon-supremo.png" alt="Dogão Bacon Supremo">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Bacon Supremo</h3>
+        <p class="descricao">Muito bacon, cheddar cremoso e cebola caramelizada.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 26,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-cream-cheese.png" alt="Dogão Cream Cheese">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Cream Cheese</h3>
+        <p class="descricao">Cream cheese, alho-poró, tomate e toque de ervas finas.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 23,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-de-frango.png" alt="Dogão de Frango">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão de Frango</h3>
+        <p class="descricao">Salsicha de frango, catupiry, bacon e cheddar cremoso.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 22,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-teriyaki.png" alt="Dogão Teriyaki">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Teriyaki</h3>
+        <p class="descricao">Cebola caramelizada ao molho teriyaki, bacon e gergelim.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 24,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-havaiano.png" alt="Dogão Havaiano">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Havaiano</h3>
+        <p class="descricao">Bacon, molho especial e salsa de abacaxi.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 23,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/dogoes/dogao-furioso.png" alt="Dogão Furioso">
+      </div>
+      <div class="info-produto">
+        <h3>Dogão Furioso</h3>
+        <p class="descricao">Molho de pimenta artesanal, batata palha e cebola.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 22,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<hr class="hr-cardapio" />
+
+
+
+
+<section id="adicionais" class="secao-cardapio">
+  <h2>Adicionais</h2>
+  <div class="grid-cardapio">
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/adicionais/batata-frita.png" alt="Batata Frita">
+      </div>
+      <div class="info-produto">
+        <h3>Batata Frita</h3>
+        <p class="descricao">Porção crocante de batatas fritas com toque de sal.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 9,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/adicionais/nuggets.png" alt="Nuggets">
+      </div>
+      <div class="info-produto">
+        <h3>Nuggets</h3>
+        <p class="descricao">6 unidades de nuggets de frango crocante.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 12,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/adicionais/onion-rings.png" alt="Onion Rings">
+      </div>
+      <div class="info-produto">
+        <h3>Onion Rings</h3>
+        <p class="descricao">Argolas de cebola empanadas e crocantes.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 11,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/adicionais/nachos.png" alt="Nachos">
+      </div>
+      <div class="info-produto">
+        <h3>Nachos</h3>
+        <p class="descricao">Nachos crocantes servidos com queijo derretido.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 13,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<hr class="hr-cardapio" />
+
+
+
+<section id="bebidas" class="secao-cardapio">
+  <h2>Bebidas</h2>
+  <div class="grid-cardapio">
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/coca-cola-350ml.png" alt="Coca-Cola 350ml">
+      </div>
+      <div class="info-produto">
+        <h3>Coca-Cola</h3>
+        <p class="descricao">Refrigerante Coca-Cola lata 350ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,50</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/coca-cola-zero-350ml.png" alt="Coca-Cola Zero 350ml">
+      </div>
+      <div class="info-produto">
+        <h3>Coca-Cola Zero</h3>
+        <p class="descricao">Refrigerante Coca-Cola sem açúcar, lata 350ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,50</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/pepsi-350ml.png" alt="Pepsi 350ml">
+      </div>
+      <div class="info-produto">
+        <h3>Pepsi</h3>
+        <p class="descricao">Refrigerante Pepsi lata 350ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,00</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/pepsi-black-350ml.png" alt="Pepsi Black 350ml">
+      </div>
+      <div class="info-produto">
+        <h3>Pepsi Black</h3>
+        <p class="descricao">Refrigerante Pepsi sem açúcar, lata 350ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,00</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/guarana-350ml.png" alt="Guaraná 350ml">
+      </div>
+      <div class="info-produto">
+        <h3>Guaraná</h3>
+        <p class="descricao">Refrigerante Guaraná Antarctica lata 350ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,50</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/guarana-zero-350ml.png" alt="Guaraná Zero 350ml">
+      </div>
+      <div class="info-produto">
+        <h3>Guaraná Zero</h3>
+        <p class="descricao">Refrigerante Guaraná Antarctica sem açúcar, lata 350ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,50</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/fanta-uva-350ml.png" alt="Fanta Uva 350ml">
+      </div>
+      <div class="info-produto">
+        <h3>Fanta Uva</h3>
+        <p class="descricao">Refrigerante Fanta Uva, lata 350ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,00</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/fanta-laranja-350ml.png" alt="Fanta Laranja 350ml">
+      </div>
+      <div class="info-produto">
+        <h3>Fanta Laranja</h3>
+        <p class="descricao">Refrigerante Fanta Laranja, lata 350ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,00</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/natural-one-laranja-300ml.png" alt="Natural One Laranja 300ml">
+      </div>
+      <div class="info-produto">
+        <h3>Natural One Laranja</h3>
+        <p class="descricao">Suco Natural One de laranja, 300ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/natural-one-uva-300ml.png" alt="Natural One Uva 300ml">
+      </div>
+      <div class="info-produto">
+        <h3>Natural One Uva</h3>
+        <p class="descricao">Suco Natural One de uva, 300ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/bebidas/natural-one-maracuja-300ml.png" alt="Natural One Maracujá 300ml">
+      </div>
+      <div class="info-produto">
+        <h3>Natural One Maracujá</h3>
+        <p class="descricao">Suco Natural One de maracujá, 300ml.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 6,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<hr class="hr-cardapio" />
+
+
+
+
+<section id="sobremesas" class="secao-cardapio">
+  <h2>Sobremesas</h2>
+  <div class="grid-cardapio">
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/sobremesas/brownie.png" alt="Brownie">
+      </div>
+      <div class="info-produto">
+        <h3>Brownie</h3>
+        <p class="descricao">Brownie de chocolate macio por dentro e crocante por fora.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 9,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-cardapio">
+      <div class="imagem-container">
+        <img src="cardápio/sobremesas/cookie.png" alt="Cookie">
+      </div>
+      <div class="info-produto">
+        <h3>Cookie</h3>
+        <p class="descricao">Cookie artesanal com gotas de chocolate.</p>
+        <div class="preco-carrinho">
+          <span class="preco">R$ 5,90</span>
+          <button class="btn-carrinho">🛒</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+      
+      <!-- <div class="dropdown-carrinho" id="dropdownCarrinho">
+  <p class="mensagem-vazio">Seu carrinho está vazio</p>
+  <ul class="lista-carrinho"></ul>
+</div> -->
+
+
+
+<button id="btnTopo" class="btn-topo hidden" onclick="voltarAoTopo()">
+  <img src="imagens-site/botao-topo.png" alt="Voltar ao topo">
+</button>
+
+
+
+   <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo redondo -->
+      <div class="footer-logo">
+        <img src="imagens-site/isologo.png" alt="Logo Dogão do Jão" />
+      </div>
+  
+      <!-- Coluna: Institucional -->
+      <div class="footer-column">
+        <h3>Institucional</h3>
+        <a href="sobre-nos.html">Quem somos?</a>
+      </div>
+
+      <!-- Coluna: Formas de pagamento -->
+<div class="footer-column">
+  <h3>Formas de Pagamento</h3>
+  <div class="payment-logos">
+    <img src="formas-de-pagamento/amex.png" alt="Amex" />
+    <img src="formas-de-pagamento/elo.png" alt="Elo" />
+    <img src="formas-de-pagamento/hipercard.png" alt="Hipercard" />
+    <img src="formas-de-pagamento/mastercard.png" alt="Mastercard" />
+    <img src="formas-de-pagamento/pix.png" alt="Pix" />
+    <img src="formas-de-pagamento/visa.png" alt="Visa" />
+  </div>
+</div>
+  
+      <!-- Coluna: Contato -->
+    <div class="footer-column contato">
+  <h3>Entre em contato</h3>
+  
+  <a href="https://www.whatsapp.com/?lang=pt_BR" target="_blank">
+    <img src="imagens-site/icone-whatsapp.png" alt="WhatsApp" class="footer-icon" />4002-8922
+  </a>
+</div>
+  
+      <!-- Coluna: Mídias sociais -->
+      <div class="footer-column">
+        <h3>Mídias Sociais</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/senaisp.moocagrafica/" target="_blank"><img src="imagens-site/icone-facebook.png" alt="Facebook" class="social-icon" /></a>
+          <a href="https://www.instagram.com/senaigrafica/" target="_blank"><img src="imagens-site/icone-instagram.png" alt="Instagram" class="social-icon" /></a>
+          <a href="https://www.youtube.com/c/SenaiGr%C3%A1fica114/featured" target="_blank"><img src="imagens-site/icone-youtube.png" alt="YouTube" class="social-icon" /></a>
+        </div>
+        <!-- <img src="imagens-site/logo-bege.png" alt="Dogão do Jão" class="logo-pequeno" /> -->
+      </div>
+    </div>
+  
+    <hr />
+  
+    <p class="copyright">
+      &copy; Luan | 2025 · Todos os direitos reservados. Imagens meramente ilustrativas.
+    </p>
+  </footer>
+
+
+<script src="carrinho.js" defer></script>
+
+<script src="menu.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Carrinho flutuante -->
+<button id="botao-carrinho">
+  <div class="icone-carrinho">
+    <img src="imagens-site/carrinho-compras.png" alt="Carrinho" />
+    <span id="contador-carrinho">0</span>
+  </div>
+</button>
+
+<div id="carrinho">
+  <h2>Carrinho</h2>
+  <div id="itens"></div>
+  <div class="total" id="total">Total: R$ 0,00</div>
+  <button id="finalizar" style="display: none;">Finalizar Pedido</button>
+  <div id="mensagem-confirmacao"></div>
+  <div id="mensagem-vazio" style="display: none;">Seu carrinho está vazio.</div>
+</div>
+
+
+
+<script src="menu-delivery.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btnTopo = document.getElementById("btnTopo");
+
+    // Garante que o botão inicie escondido
+    btnTopo.classList.add("hidden");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 500) {
+        btnTopo.classList.remove("hidden");
+      } else {
+        btnTopo.classList.add("hidden");
+      }
+    });
+  });
+
+  function voltarAoTopo() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+
+  
+
+</body>
+</html>

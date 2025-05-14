@@ -1,0 +1,609 @@
+body {
+    margin: 0;
+    font-family: 'Unbounded', sans-serif;
+    background-color: #dbdbdb;
+    color: #2b2b2b;
+  }
+
+  main section {
+    padding: 4rem 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  h2 {
+    color: #eb3e40;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* BANNERS DA TELA DE COMEÇO */
+
+  .promo-banner {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .banner-wrapper {
+    position: relative;
+    display: none;
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Mostra só o banner desktop em telas maiores */
+  @media (min-width: 769px) {
+    .banner-wrapper.banner-desktop {
+      display: block;
+    }
+  }
+  
+  /* Mostra só o banner mobile em telas menores */
+  @media (max-width: 768px) {
+    .banner-wrapper.banner-mobile {
+      display: block;
+    }
+  }
+  
+  
+  
+
+
+
+
+  
+.menu-categorias-wrapper {
+    position: sticky;
+    background: #fff;
+    z-index: 900;
+    padding: 0.5rem 0;
+    /* border-bottom: 2px solid #ffe7d4; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Topo ajustável por resolução */
+  @media (min-width: 769px) {
+    .menu-categorias-wrapper {
+      top: 105px; /* altura do header desktop */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu-categorias-wrapper {
+      top: 95px; /* altura do header mobile */
+    }
+  }
+  
+  /* Container das categorias */
+  .menu-categorias {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    scrollbar-width: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center; /* Garante o alinhamento horizontal */
+    scroll-padding-left: 3rem; /* facilita rolagem até mostrar o início */
+  }
+
+  .menu-categorias-wrapper {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-categorias {
+      padding-left: 2.5rem; /* ou mais, conforme o botão de scroll */
+    }
+  }
+  
+  .menu-categorias::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .categoria {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #7e7e7e;
+    transition: color 0.2s ease;
+  }
+  
+  .categoria span {
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+  }
+  
+  .categoria:hover span {
+    color: #eb3e40;
+  }
+  
+  .categoria img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.3rem;
+    object-fit: contain;
+  }
+  
+  /* Hover com troca de imagem */
+  .categoria[href="#novidades"]:hover img {
+    content: url("icones-navegacao/novidades-vermelho.png");
+  }
+  .categoria[href="#combos"]:hover img {
+    content: url("icones-navegacao/combos-vermelho.png");
+  }
+  .categoria[href="#dogoes"]:hover img {
+    content: url("icones-navegacao/dogoes-vermelho.png");
+  }
+  .categoria[href="#adicionais"]:hover img {
+    content: url("icones-navegacao/acompanhamentos-vermelho.png");
+  }
+  .categoria[href="#bebidas"]:hover img {
+    content: url("icones-navegacao/bebidas-vermelho.png");
+  }
+  .categoria[href="#sobremesas"]:hover img {
+    content: url("icones-navegacao/sobremesas-vermelho.png");
+  }
+  
+  /* Botões de scroll lateral (visíveis só no mobile) */
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+    display: none; /* escondido por padrão */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .scroll-btn.left {
+    left: 10px;
+  }
+  
+  .scroll-btn.right {
+    right: 10px;
+  }
+  
+  /* Ativa os botões de scroll somente no mobile */
+  @media (max-width: 768px) {
+    .scroll-btn {
+      display: flex;
+    }
+  
+    .categoria img {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .categoria span {
+      font-size: 0.75rem;
+    }
+  }
+
+@media (min-width: 769px) {
+  .menu-categorias {
+    padding: 0.5rem 0; /* Remove o padding lateral adicionado no mobile */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-categorias {
+    padding-left: 1.0rem; /* espaço para o botão esquerdo */
+    justify-content: flex-start; /* Alinha à esquerda no mobile para facilitar scroll */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+.grid-cardapio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px; /* Aumentado para permitir 4 colunas no desktop */
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* .secao-cardapio {
+  padding: 2rem 1rem;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+} */
+
+.hr-cardapio {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 60px auto;
+  width: 62%;
+}
+
+@media (max-width: 768px) {
+  .hr-cardapio {
+    width: 90%;
+  }
+}
+
+
+.secao-cardapio:last-child {
+  border-bottom: none;
+}
+
+.secao-cardapio {
+  scroll-margin-top: 250px;
+}
+
+.secao-cardapio h2 {
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem auto;
+  color: #222;
+  text-align: left;
+}
+
+.alinhamento-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.secao-cardapio hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.item-cardapio {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px; /* ou 300px, ajuste conforme preferir */
+  margin: 0 auto; /* centraliza quando não há 4 por linha */
+}
+
+@media (min-width: 1024px) {
+  .grid-cardapio {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.imagem-container {
+  width: 100%;
+  max-width: 546px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Mantém formato quadrado */
+}
+
+.imagem-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garante que não corte a imagem */
+  display: block;
+}
+
+
+.info-produto {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-produto h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.descricao {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.preco-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preco {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #eb3e40;
+}
+
+.btn-carrinho {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #eb3e40;
+  transition: transform 0.2s ease;
+}
+
+.btn-carrinho:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .grid-cardapio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.fundo-cardapio {
+  background-color: #f9f9f9;
+  padding: 50px 0 80px 0; /* topo, lados e base */
+}
+
+
+.fundo-cardapio {
+  background-color: #f9f9f9; /* Cinza bem clarinho */
+  padding-top: 3rem; /* Para dar um pequeno espaço após o menu de categorias */
+}
+
+
+
+
+
+.item-cardapio {
+  height: 100%;
+}
+
+.info-produto {
+  flex-grow: 1; /* preenche o espaço restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.preco-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+/* Botão flutuante do carrinho */
+#botao-carrinho {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ícone do carrinho */
+#botao-carrinho img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Contador em forma de bolinha */
+#contador-carrinho {
+  position: absolute;
+  top: 12px; /* você pode ajustar fino aqui */
+  right: 12px; /* e aqui também */
+  background-color: #e53935;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  min-width: 28px;
+  height: 17px;
+  border-radius: 50%;
+  display: none; /* ou block/flex quando visível */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1;
+  padding: 0 6px; /* para adaptar a largura com números de 2 ou 3 dígitos */
+  transform: translate(5px, 1px); /* esse é o segredo para centralizar finamente */
+}
+
+
+
+/* Carrinho (janela flutuante) */
+#carrinho {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 700px;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Título do carrinho */
+#carrinho h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* Itens do carrinho */
+#itens .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #d83b3b;
+  word-break: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#itens .item span:first-child {
+  max-width: 65%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#itens .item span:last-child {
+  font-weight: bold;
+  min-width: 70px;
+  text-align: right;
+}
+
+/* Total */
+.total {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 12px;
+  font-family: 'Unbounded', sans-serif;
+  color: #000;
+}
+
+/* Botão finalizar pedido */
+#finalizar {
+  margin-top: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+#finalizar:hover {
+  background-color: #3e9343;
+}
+
+/* Mensagem de confirmação */
+#mensagem-confirmacao {
+  margin-top: 16px;
+  background-color: #e6ffe6;
+  border-left: 5px solid #4CAF50;
+  padding: 10px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  color: #333;
+  display: none;
+}
+
+.icone-carrinho {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+#contador-carrinho {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #e53935;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: none;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+}
+
+#contador-carrinho {
+  font-family: 'Unbounded', sans-serif;
+}
+
+.btn-carrinho {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-carrinho.adicionar {
+  background-color: #4CAF50; /* verde */
+}
+
+.btn-carrinho.remover {
+  background-color: #e53935; /* vermelho */
+}
